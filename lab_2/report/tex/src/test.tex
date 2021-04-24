@@ -1,0 +1,80 @@
+\section{Пример работы}
+
+Первый тест - проверка на обработку случая отсутсвия первого файла
+
+\begin{verbatim}
+
+danila@LAPTOP-5N1LT0S0:/mnt/c/VUZ/OS/lab_2/src$ cat test1
+f
+danila@LAPTOP-5N1LT0S0:/mnt/c/VUZ/OS/lab_2/src$ ./a.out <test1
+File not found
+
+\end{verbatim}
+
+Второй тест - проверка на обработку случая отсутсвия второго файла
+
+\begin{verbatim}
+
+danila@LAPTOP-5N1LT0S0:/mnt/c/VUZ/OS/lab_2/src$ cat test2
+f1
+f
+danila@LAPTOP-5N1LT0S0:/mnt/c/VUZ/OS/lab_2/src$ ./a.out <test2
+File not found
+
+\end{verbatim}
+
+Третий и четвёртый тесты - проверка работоспособности программы на корректных данных
+
+\begin{verbatim}
+
+danila@LAPTOP-5N1LT0S0:/mnt/c/VUZ/OS/lab_2/src$ cat test3
+f1
+f2
+a b c d e f g h i j k l
+m n o p q r s t u v w x y z
+danila@LAPTOP-5N1LT0S0:/mnt/c/VUZ/OS/lab_2/src$ ./a.out <test3
+danila@LAPTOP-5N1LT0S0:/mnt/c/VUZ/OS/lab_2/src$ cat f1
+ b c d  f g h  j k l 
+danila@LAPTOP-5N1LT0S0:/mnt/c/VUZ/OS/lab_2/src$ cat f2
+m n  p q r s t  v w x  z
+danila@LAPTOP-5N1LT0S0:/mnt/c/VUZ/OS/lab_2/src$ cat test4
+f1
+f2
+m n o p q r s t u v w x y z
+a b c d e f g h i j k l
+m n o p q r s t u v w x y z
+a b c d e f g h i j k l
+m n o p q r s t u v w x y z
+a b c d e f g h i j k l
+m n o p q r s t u v w x y z
+a b c d e f g h i j k l
+danila@LAPTOP-5N1LT0S0:/mnt/c/VUZ/OS/lab_2/src$ ./a.out <test4
+danila@LAPTOP-5N1LT0S0:/mnt/c/VUZ/OS/lab_2/src$ cat f1
+m n  p q r s t  v w x  z
+m n  p q r s t  v w x  z
+m n  p q r s t  v w x  z
+m n  p q r s t  v w x  z
+danila@LAPTOP-5N1LT0S0:/mnt/c/VUZ/OS/lab_2/src$ cat f2
+ b c d  f g h  j k l 
+ b c d  f g h  j k l 
+ b c d  f g h  j k l
+ b c d  f g h  j k l
+ 
+\end{verbatim}
+
+Пятый тест - проверка работоспособности программы на пустых данных
+
+\begin{verbatim}
+ 
+danila@LAPTOP-5N1LT0S0:/mnt/c/VUZ/OS/lab_2/src$ cat test5
+f1
+f2
+danila@LAPTOP-5N1LT0S0:/mnt/c/VUZ/OS/lab_2/src$ ./a.out <test5
+danila@LAPTOP-5N1LT0S0:/mnt/c/VUZ/OS/lab_2/src$ cat f1
+danila@LAPTOP-5N1LT0S0:/mnt/c/VUZ/OS/lab_2/src$ cat f2
+
+\end{verbatim}
+
+\pagebreak
+
+
